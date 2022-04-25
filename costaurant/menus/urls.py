@@ -1,8 +1,7 @@
-from django.contrib import admin
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index_view),
-    path('food/<str:menu>/', views.detail),
+    path('', views.index),
+    path('<int:pk>/', views.detail),  # 수정해주세요.
 ]
